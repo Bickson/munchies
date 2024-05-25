@@ -2,13 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: 'SF';
-  font-style: normal;
-  font-weight: 400;
-  src: url('/assets/fonts/SF-Pro.ttf');
-}
-
 @layer base {
   body {
     @apply bg-off-white
