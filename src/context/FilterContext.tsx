@@ -1,5 +1,5 @@
 import { DeliveryTime, PriceRange } from '@/types';
-import { createContext, useState } from 'react';
+import { createContext, ReactNode, useState } from 'react';
 
 type FilterContextType = {
   selectedCategories: string[],
@@ -19,7 +19,7 @@ const FilterStateContext = createContext<FilterContextType>({
   setSelectedPrice: () => {},
 });
 
-const FilterProvider = ({ children }) => {
+const FilterProvider = ({ children }: { children: ReactNode }) => {
   const [selectedCategories, _setSelectedCategories] = useState<string[]>([]);
   const [selectedTime, _setSelectedTime] = useState<DeliveryTime[]>([]);
   const [selectedPrice, _setSelectedPrice] = useState<PriceRange[]>([]);
