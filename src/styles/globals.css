@@ -2,28 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@font-face {
+  font-family: 'SF';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/SF-Pro.ttf');
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer base {
+  body {
+    @apply bg-off-white
   }
-}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  .content {
+    @apply w-screen min-w-[375px] max-w-[1440px] mx-auto pl-6 lg:pl-10
+  }
+
+  h1 {
+    @apply font-normal text-[40px] leading-[40px] -tracking-[0.5px]  text-black
+  }
+
+  h2 {
+    @apply font-normal text-2xl leading-[24px] -tracking-[0.5px]  text-black
+  }
+
+  p {
+    @apply font-normal text-sm leading-[14px] -tracking-[0.5px] text-black
+  }
+
+  p.filter-label {
+    @apply font-label text-xs leading-[12px] text-black opacity-40 mt-8 mb-4
+  }
+
+  button.filter {
+    @apply font-normal text-xs leading-[15px] text-black
+  }
+
+  .card {
+    @apply bg-white rounded-[10px] border-[0.6px] border-[rgba(0,0,0,0.1)] shadow-card
+  }
+
+  .absolute-center {
+    @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
+  }
 }
 
 @layer utilities {

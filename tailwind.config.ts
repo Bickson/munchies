@@ -8,11 +8,19 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        'off-white': '#FAFAFA',
+        'green': '#00703A'
       },
+      fontFamily: {
+        'sf': ['var(--font-sf)', 'sans-serif'],
+      },
+      fontWeight: {
+        'label': '590'
+      },
+      boxShadow: {
+        'card': '-16px 9px 18px rgba(0, 0, 0, 0.01), -4px 2px 10px rgba(0, 0, 0, 0.01)'
+      }
     },
   },
   plugins: [],
